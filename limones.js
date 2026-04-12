@@ -13,10 +13,11 @@ let limonX = canvas.width / 2;
 let limonY = 0;
 let puntaje = 0;
 let vidas = 3;
-let velocidadcaida = 200;
+let velocidadCaida = 200;
+let intervaloLimon;
 
 function iniciar() {
-    setInterval(bajarLimon, velocidadcaida); //primerPrarametro: funcion, segundoParametro: tiempo en milisegundos
+    intervaloLimon = setInterval(bajarLimon, velocidadCaida); //primerPrarametro: funcion, segundoParametro: tiempo en milisegundos
     dibujarSuelo();
     dibujarPersonaje();
     aparecerLimon();
@@ -71,6 +72,16 @@ function detectarAtrapado() {
         aparecerLimon();
         puntaje = puntaje + 1;
         mostrarSpan("txtPuntaje", puntaje);
+        if (puntaje == 3) {
+            cambiarVelocidad(150);
+            mostrarSpan("txtPuntaje", puntaje);
+        } if (puntaje == 6) {
+            cambiarVelocidad(100);
+            mostrarSpan("txtPuntaje", puntaje);
+        } if (puntaje == 10) {
+            alert("Monta un puesto de limonada y haz negocio!!\u{1F601}");
+            mostrarSpan("txtPuntaje", puntaje);
+        }
     }
 }
 
@@ -94,4 +105,3 @@ function detectarPiso() {
         }
     }
 }
-
