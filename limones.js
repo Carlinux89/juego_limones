@@ -107,3 +107,12 @@ function detectarPiso() {
         }
     }
 }
+
+function reiniciar() {
+    puntaje = 0;
+    vidas = 3;
+    mostrarSpan("txtPuntaje", puntaje);
+    mostrarSpan("txtVidas", vidas);
+    clearInterval(intervaloLimon);
+    iniciar();
+}
