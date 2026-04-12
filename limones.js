@@ -79,8 +79,9 @@ function detectarAtrapado() {
             cambiarVelocidad(100);
             mostrarSpan("txtPuntaje", puntaje);
         } if (puntaje == 10) {
-            alert("Monta un puesto de limonada y haz negocio!!\u{1F601}");
+            alert("GANADOR!!Monta un puesto de limonada y haz negocio!!\u{1F601}");
             mostrarSpan("txtPuntaje", puntaje);
+            clearInterval(intervaloLimon);
         }
     }
 }
@@ -102,6 +103,7 @@ function detectarPiso() {
             vidas = 3;
             mostrarSpan("txtPuntaje", puntaje);
             mostrarSpan("txtVidas", vidas);
+            clearInterval(intervaloLimon);
         }
     }
 }

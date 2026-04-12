@@ -18,3 +18,4 @@ function cambiarVelocidad(nuevaVelocidad) {
     velocidadCaida = nuevaVelocidad;
     intervaloLimon = setInterval(bajarLimon, velocidadCaida);
 }
+
