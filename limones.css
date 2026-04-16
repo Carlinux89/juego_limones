@@ -1,31 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: white;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fef9c3, #d9f99d);
   margin: 0;
   padding: 20px;
+  text-align: center;
+  color: #1f2937;
 }
 
+/* CONTENEDOR */
 .contenedor {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* HEADER */
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.subtitulo {
+  margin: 5px 0;
+  color: #6b7280;
+}
+
+.autor {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* CANVAS */
 canvas {
-  background-color: #111827;
-  border: 3px solid #38bdf8;
-  display: block;
-  margin: 20px auto;
+  width: 100%;
+  border-radius: 15px;
+  background: linear-gradient(#38bdf8, #e0f2fe);
+  margin: 15px 0;
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* PANEL */
 .panel {
-  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card span {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.card strong {
+  font-size: 20px;
+  color: #111827;
+}
+
+/* BOTONES */
+.botones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .botones button {
+  flex: 1;
   margin: 5px;
-  padding: 10px 16px;
-  font-size: 16px;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 15px;
   cursor: pointer;
+  background: #facc15;
+  color: #1f2937;
+  transition: all 0.2s ease;
+}
+
+.botones button:hover {
+  transform: scale(1.05);
+  background: #eab308;
+}
+
+/* BOTON REINICIAR */
+.reiniciar {
+  background: #22c55e;
+  color: white;
+}
+
+.reiniciar:hover {
+  background: #16a34a;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  canvas {
+    height: 300px;
+  }
 }
