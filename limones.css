@@ -4,11 +4,12 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #fef9c3, #d9f99d);
+  background: url(logoKrakeDev.jpg);
   margin: 0;
   padding: 20px;
   text-align: center;
   color: #1f2937;
+
 }
 
 /* CONTENEDOR */
